@@ -1,0 +1,5 @@
+name:             Boost
+main:             sabone\Boost
+version:          1.0.0
+api:              [3.0.0, 3.0.0-ALPHA10, 3.0.0-ALPHA11]
+author:           Sabone(imaheejae@gmail.com)
