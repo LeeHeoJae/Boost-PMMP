@@ -1,5 +1,5 @@
 name:             Boost
-main:             sabone\Boost
+main:             xyz\bedition\Boost
 version:          1.0.0
-api:              [3.0.0, 3.0.0-ALPHA10, 3.0.0-ALPHA11,3.0.0-ALPHA12, 4.0.0]
+api:              [3.0.0,3.3.0,3.4.0,4.0.0]
 author:           Sabone(imaheejae@gmail.com)
