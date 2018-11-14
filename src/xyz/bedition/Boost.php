@@ -4,7 +4,7 @@ namespace xyz\bedition;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\event\entity\EntityRegainHealthEvent;
+use pocketmine\event\entity\EntityRegainHealthEvent as ERH;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\player\PlayerExhaustEvent;
 use pocketmine\Server;
@@ -21,9 +21,9 @@ class Boost extends PluginBase implements Listener{
 			$entity->sendMessage($ev->getCause());
 		}
 	}
-	public function onRegen(EntityRegainHealthEvent $ev){
+	public function onRegen(ERH $ev){
 		$reason=$ev->getRegainReason();
-		if($reason==CAUSE_SATURATION||$reason==CAUSE_REGEN||$reason==CAUSE_EATING){
+		if($reason==ERH::CAUSE_SATURATION||$reason==ERH::CAUSE_REGEN||$reason==ERH::CAUSE_EATING){
 			$ev->setCancelled();
 		}
 	}
