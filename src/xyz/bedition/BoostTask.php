@@ -13,7 +13,7 @@ class BoostTask extends Task{
 				$food-=0.25;
 				$player->setFood($food);
 			}
-			if($food>0){
+			if($food>=1){
 				$player->heal(new ERH($player,0.5,ERH::CAUSE_CUSTOM));
 				if($food>6){
 					$player->heal(new ERH($player,0.5,ERH::CAUSE_CUSTOM));

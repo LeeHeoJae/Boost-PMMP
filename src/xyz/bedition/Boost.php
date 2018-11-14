@@ -14,13 +14,6 @@ class Boost extends PluginBase implements Listener{
 		$this->getScheduler()->scheduleRepeatingTask(new BoostTask(),20);
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
 	}
-	public function onDamage(EntityDamageEvent $ev){
-		$this->getLogger()->info($ev->getCause());
-		$entity=$ev->getEntity();
-		if($entity instanceof Player){
-			$entity->sendMessage($ev->getCause());
-		}
-	}
 	public function onRegen(ERH $ev){
 		$reason=$ev->getRegainReason();
 		if($reason==ERH::CAUSE_SATURATION||$reason==ERH::CAUSE_REGEN||$reason==ERH::CAUSE_EATING){
